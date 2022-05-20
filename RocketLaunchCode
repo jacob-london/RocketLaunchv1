@@ -1,0 +1,27 @@
+const int Button = 2;
+const int Starter = 3;
+int ButtonValue = 0;
+
+
+
+void setup() {
+
+  pinMode(Button, INPUT);
+  pinMode(Starter, OUTPUT);
+
+
+}
+
+void loop() {
+
+  ButtonValue = digitalRead(Button);
+  
+  if(ButtonValue == HIGH)
+  {
+    digitalWrite(Starter, HIGH);
+  }
+  else{
+    digitalWrite(Starter, LOW);
+    
+  } 
+}
